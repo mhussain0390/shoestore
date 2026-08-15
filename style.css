@@ -1,0 +1,442 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+nav {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px 10px 50px;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.navItem h1 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  font-size: 16px;
+}
+
+.searchInput::placeholder {
+  color: lightgray;
+}
+
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.slider {
+  background-image: url("./p2pic/bg12.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+  width: 100%;
+}
+
+.sliderWrapper {
+  display: flex;
+  width: 500%;
+  transition: all 1s ease-in-out;
+}
+
+.sliderItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 90vh;
+}
+
+.sliderBg {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+  background-image: url("./p2pic/bg5.jpg")
+}
+
+.sliderImg {
+  z-index: 1;
+  width: 450px;
+}
+
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+  padding: 3px 15px;
+}
+
+.buyButton {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid gray;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDesc {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+.product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+}
+
+.productImg {
+  width: 50%;
+}
+
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+  color: black;
+}
+
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid gray;
+}
+
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.size:hover {
+  background-color: black;
+  color: white;
+}
+
+.productButton {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.productButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 20px;
+}
+
+.galleryImg {
+  width: 100%;
+}
+
+.galleryTitle {
+  font-size: 30px;
+}
+
+.newSeason {
+  display: flex;
+}
+
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nsImg {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.nsTitle {
+  font-size: 40px;
+}
+
+.nsButton {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  background-color: #111;
+  color: white;
+  padding: 50px;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 200px; 
+  height: auto;
+  background-color: #111;
+  padding: 5px 0; 
+}
+
+@media screen and (max-width: 768px) {
+  .navTop, .search, .limitedOffer {
+    display: none;
+  }
+  nav {
+    padding: 10px;
+  }
+  .navBottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menuItem {
+    margin: 5px 10px;
+    font-size: 13px;
+  }
+  .slider {
+    clip-path: none;
+    height: 65vh;
+  }
+  .sliderWrapper {
+    width: 500%;
+  }
+  .sliderItem {
+    width: 100%;
+    flex-direction: column;
+  }
+  .sliderBg {
+    width: 180px;
+    height: 180px;
+  }
+  .sliderImg {
+    width: 80%;
+  }
+  .sliderTitle, .sliderPrice, .buyButton {
+    position: static;
+    text-align: center;
+    margin: 15px auto;
+  }
+  .sliderTitle {
+    font-size: 30px;
+  }
+  .sliderPrice {
+    font-size: 24px;
+  }
+  .product {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+  .productImg {
+    width: 90%;
+  }
+  .productDetails {
+    position: static;
+    width: 100%;
+    padding: 20px;
+  }
+  .gallery {
+    flex-direction: column;
+  }
+  .newSeason {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  .footerLeft {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
