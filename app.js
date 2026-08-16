@@ -1,6 +1,6 @@
 const wrapper = document.querySelector(".sliderWrapper");
 const menuItems = document.querySelectorAll(".menuItem");
-const productImg = document.getElementById("productImg");
+const productImg = document.querySelector(".productImg");
 const productTitle = document.querySelector(".productTitle");
 const productPrice = document.querySelector(".productPrice");
 const productColors = document.querySelectorAll(".color");
