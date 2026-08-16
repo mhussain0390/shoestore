@@ -384,21 +384,24 @@ footer {
   }
   .slider {
     clip-path: none;
-    height: 65vh;
   }
-  .sliderWrapper {
-    width: 500%;
-  }
+
   .sliderItem {
     width: 100%;
     flex-direction: column;
+    height: auto;
+    padding: 60px 20px;
   }
   .sliderBg {
-    width: 180px;
-    height: 180px;
+    position: static;
+    width: 239px;
+    height: 247px;
+    order: -1;
   }
   .sliderImg {
-    width: 80%;
+    width: 67%;
+    position: static;
+    margin-top: -224px;
   }
   .sliderTitle, .sliderPrice, .buyButton {
     position: static;
@@ -410,6 +413,18 @@ footer {
   }
   .sliderPrice {
     font-size: 24px;
+  }
+  .features {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  .feature {
+    width: 100%;
+  }
+  .featureDesc {
+    width: 100%;
+    height: auto;
   }
   .product {
     flex-direction: column;
@@ -424,11 +439,27 @@ footer {
     width: 100%;
     padding: 20px;
   }
+  .sizes, .colors {
+    flex-wrap: wrap;
+  }
+  .payment {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px 25px 30px;
+  }
+  .cardInfo {
+    flex-wrap: wrap;
+  }
   .gallery {
     flex-direction: column;
+    padding: 20px;
   }
   .newSeason {
     flex-direction: column;
+  }
+  .nsImg {
+    height: 250px;
   }
   footer {
     flex-direction: column;
@@ -438,5 +469,8 @@ footer {
   .footerLeft {
     flex-direction: column;
     gap: 30px;
+  }
+  .footerRight {
+    padding: 0;
   }
 }
